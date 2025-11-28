@@ -131,10 +131,10 @@ public class MyLinkedList implements Iterable<Integer>{
 
     @Override
     public Iterator<Integer> iterator() {
-        return new LinkedListIterator;
+        return new LinkedListIterator(this);
     }
 
-    private class Node{
+    public class Node{
         int value;
         Node next;
 
@@ -145,4 +145,7 @@ public class MyLinkedList implements Iterable<Integer>{
 
     }
 
+    public Node getHead() {
+        return head;
+    }
 }
